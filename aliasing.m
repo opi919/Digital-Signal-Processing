@@ -4,19 +4,19 @@ close all;
 t = 0:0.001:1;
 f=5;
 
-cSignal = sin(2*pi*f*t);
+cSignal = sin(2*pi*f*t); %continuous signal
 plot(t,cSignal);
 hold on;
 
 fs=9;
 ts=0:1/fs:1;
 
-sSignal = sin(2*pi*f*ts);
+sSignal = sin(2*pi*f*ts);  %sampled signal
 plot(ts,sSignal,'--o');
 hold on;
 
 if fs<2*f
-   alias_f = abs(f-(round(f/fs)*fs));
+   alias_f = abs(f-(round(f/fs)*fs));  % fp = |f-(round(f/fs)*fs)|
    if fs>f
        alias_s = sin(2*pi*alias_f*t + pi);
    else
