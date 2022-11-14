@@ -3,12 +3,12 @@ close all;
 
 f1=64;
 t1= 0:1/f1:1;
-rawFirstSignal = sin(2*pi*5*t1);
+rawFirstSignal = sin(2*pi*f1*t1);
 firstSignalLength = length(rawFirstSignal);
 
 f2=64;
 t2=0:1/f2:1;
-rawSecSignal = sin(2*pi*5*t2);
+rawSecSignal = sin(2*pi*f2*t2);
 secSignalLength = length(rawSecSignal);
 
 correlationSize = firstSignalLength+secSignalLength-1;
