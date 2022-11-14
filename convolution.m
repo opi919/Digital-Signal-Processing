@@ -23,6 +23,7 @@ for n = 1: convolutionSize
    end
 end
 
+%matlab col=nvulution function
 f_convo = conv(rawInput,rawImpulse);
 
 subplot(421);
