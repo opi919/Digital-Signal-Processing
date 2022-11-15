@@ -1,12 +1,12 @@
 clc;
 close all;
 
-f1=64;
+f1=100;
 t1= 0:1/f1:1;
 rawFirstSignal = sin(2*pi*f1*t1);
 firstSignalLength = length(rawFirstSignal);
 
-f2=64;
+f2=200;
 t2=0:1/f2:1;
 rawSecSignal = sin(2*pi*f2*t2);
 secSignalLength = length(rawSecSignal);
