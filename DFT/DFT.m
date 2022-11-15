@@ -22,7 +22,7 @@ freq = linspace(0, fs , N);
 % calculate dft
 dft = DFT_CAL(signal,N);
 
-
+idft = IDFT_CAL(dft,N);
 
 subplot(4,2,[1,2])
 plot(ts,signal,'-o');
@@ -43,3 +43,7 @@ title('Magnitude (fft)');
 subplot(426)
 stem(freq,angle(dft_f));
 title('Phase (fft)');
+
+subplot(4,2,[7,8])
+plot(ts,idft,'r-o');
+title('Inverse DFT');
